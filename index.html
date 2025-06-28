@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0x1337root</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="background-color: #333333; margin: 0; padding: 0; --nav-width: 340px;">
+    <div class="nav-strip">
+        <div class="language-selector">
+            <button id="lang-en" class="flag-btn active" title="English">
+                <svg width="20" height="15" viewBox="0 0 60 30">
+                    <clipPath id="s">
+                        <path d="M0,0 v30 h60 v-30 z"/>
+                    </clipPath>
+                    <clipPath id="t">
+                        <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
+                    </clipPath>
+                    <g clip-path="url(#s)">
+                        <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+                        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                        <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/>
+                        <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                        <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+                    </g>
+                </svg>
+            </button>
+            <button id="lang-tr" class="flag-btn" title="Türkçe">
+                <svg width="20" height="15" viewBox="0 0 1200 800">
+                    <rect width="1200" height="800" fill="#E30A17"/>
+                    <circle cx="425" cy="400" r="200" fill="#ffffff"/>
+                    <circle cx="475" cy="400" r="160" fill="#E30A17"/>
+                    <polygon points="583.334,400 764.235,458.779 652.431,304.894 652.431,495.106 764.235,341.221" fill="#ffffff"/>
+                </svg>
+            </button>
+        </div>
+        <div class="terminal-header">
+            <div class="terminal-title">root@0x1337root:~$ ls -la</div>
+        </div>
+        <div class="file-system">
+            <div class="directory">
+                <div id="nav-root" class="dir-name active" style="text-decoration: none; display: flex; align-items: center; justify-content: space-between; cursor:pointer;">
+                    📁 /
+                    <span class="dir-permissions">drwxr-xr-x</span>
+                </div>
+                <div class="file-list">
+                    <div id="nav-whoami" class="file-item" style="display: flex; align-items: center; text-decoration: none; border-radius: 3px; cursor:pointer;">
+                        <span class="tree-unicode">├─</span>
+                        <span class="file-icon">📄</span>
+                        <span class="file-link executable">whoami</span>
+                        <span class="permissions">-rwxr-xr-x</span>
+                    </div>
+                    <div id="nav-blog" class="file-item" style="display: flex; align-items: center; text-decoration: none; border-radius: 3px; cursor:pointer;">
+                        <span class="tree-unicode">└─</span>
+                        <span class="file-icon">📁</span>
+                        <span class="file-link text-file">blog/</span>
+                        <span id="blog-arrow" style="margin: 0 8px 0 0; font-size: 18px; line-height: 1; vertical-align: middle; display: inline-block; width: 1em; text-align: center;">+</span>
+                        <span class="permissions">drwxr-xr-x</span>
+                    </div>
+                    <div id="blog-subfolders" style="display:none; margin-left: 0;">
+                        <div id="nav-games" class="file-item" style="display: flex; align-items: center; text-decoration: none; border-radius: 3px; cursor:pointer; margin-left: 1.2em;">
+                            <span class="tree-unicode">├─</span>
+                            <span class="file-icon">📁</span>
+                            <span class="file-link text-file">games/</span>
+                            <span id="games-arrow" style="margin: 0 8px 0 0; font-size: 18px; line-height: 1; vertical-align: middle; display: inline-block; width: 1em; text-align: center;">+</span>
+                            <span class="permissions">drwxr-xr-x</span>
+                        </div>
+                        <div id="games-subfolders" style="display:none; margin-left: 1.2em;">
+                            <div id="nav-liesofp" class="file-item" style="display: flex; align-items: center; text-decoration: none; border-radius: 3px; cursor:pointer;">
+                                <span class="tree-unicode">└─</span>
+                                <span class="file-icon">📄</span>
+                                <span class="file-link executable">liesofp</span>
+                                <span class="permissions">-rwxr-xr-x</span>
+                            </div>
+                        </div>
+                        <div id="nav-hacking" class="file-item" style="display: flex; align-items: center; text-decoration: none; border-radius: 3px; cursor:pointer; margin-left: 1.2em;">
+                            <span class="tree-unicode">├─</span>
+                            <span class="file-icon">📁</span>
+                            <span class="file-link text-file">hacking/</span>
+                            <span id="hacking-arrow" style="margin: 0 8px 0 0; font-size: 18px; line-height: 1; vertical-align: middle; display: inline-block; width: 1em; text-align: center;">+</span>
+                            <span class="permissions">drwxr-xr-x</span>
+                        </div>
+                        <div id="hacking-subfolders" style="display:none; margin-left: 1.2em;">
+                            <div id="nav-network" class="file-item" style="display: flex; align-items: center; text-decoration: none; border-radius: 3px; cursor:pointer;">
+                                <span class="tree-unicode">├─</span>
+                                <span class="file-icon">📁</span>
+                                <span class="file-link text-file">network/</span>
+                                <span class="permissions">drwxr-xr-x</span>
+                            </div>
+                            <div id="nav-web" class="file-item" style="display: flex; align-items: center; text-decoration: none; border-radius: 3px; cursor:pointer;">
+                                <span class="tree-unicode">├─</span>
+                                <span class="file-icon">📁</span>
+                                <span class="file-link text-file">web/</span>
+                                <span class="permissions">drwxr-xr-x</span>
+                            </div>
+                            <div id="nav-iot" class="file-item" style="display: flex; align-items: center; text-decoration: none; border-radius: 3px; cursor:pointer;">
+                                <span class="tree-unicode">└─</span>
+                                <span class="file-icon">📁</span>
+                                <span class="file-link text-file">iot/</span>
+                                <span class="permissions">drwxr-xr-x</span>
+                            </div>
+                        </div>
+                        <div id="nav-personal" class="file-item" style="display: flex; align-items: center; text-decoration: none; border-radius: 3px; cursor:pointer; margin-left: 1.2em;">
+                            <span class="tree-unicode">└─</span>
+                            <span class="file-icon">📁</span>
+                            <span class="file-link text-file">personal/</span>
+                            <span class="permissions">drwxr-xr-x</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content-area" class="video-container">
+        <iframe id="yt-iframe" width="100%" height="100%" title="YouTube video player" frameborder="0" allowfullscreen style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);"></iframe>
+    </div>
+    <script src="js/translations.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
